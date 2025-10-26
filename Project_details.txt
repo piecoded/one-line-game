@@ -1,0 +1,10 @@
+Project Title: One-Line Draw
+
+Based on the concept of Graphs and Eulerian Path
+
+Group Members:
+    Radhika Bansode - UIT2025011
+    Rachana Vazirani - UIT2025012
+
+GitHub repository link: https://github.com/piecoded/one-line-game
+Live Demo Link: https://piecoded.github.io/one-line-game/
