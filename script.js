@@ -332,12 +332,31 @@
             }
         });        
         // Initialize
+        // function resizeCanvas() {
+        //     const board = canvas.parentElement;
+        //     canvas.width = board.clientWidth;
+        //     canvas.height = board.clientHeight;
+        //     initGame();
+        // }        
+
         function resizeCanvas() {
-            const board = canvas.parentElement;
-            canvas.width = board.clientWidth;
-            canvas.height = board.clientHeight;
-            initGame();
-        }        
+  const board = canvas.parentElement;
+
+  // CSS display size in pixels
+  const displayWidth  = board.clientWidth;
+  const displayHeight = board.clientHeight;
+
+  // If you want to handle high DPI:
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width  = Math.round(displayWidth  * dpr);
+  canvas.height = Math.round(displayHeight * dpr);
+
+  // Optionally scale the context so that your drawing logic uses CSS‐pixel coordinates
+  ctx.scale(dpr, dpr);
+
+  initGame();
+}
+
         window.addEventListener('resize', resizeCanvas);
         initAudio();
         resizeCanvas();
